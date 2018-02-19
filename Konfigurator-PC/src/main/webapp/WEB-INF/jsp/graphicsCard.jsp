@@ -21,11 +21,16 @@
     	
 </div>
 <div id="content">
-Witaj na stronie Konfigurator-PC, umozliwiajacej skonfigurowanie zestawu komputerowego.
+<h2>Lista kart graficznych</h2>
 <br/>
-<br/>
+	<form  action="<c:url value="/index" />" method="GET">
+    	<input type="submit" name="action" value="Strona glowna" />
+	</form>
+	<br/>
+	<br/>
+	<br/>
 	<form:form action="graphicsCard.do" method="POST" commandName="graphicsCard">
-		<table>
+		<table style="text-align: left;">
 			<tr>
 				<td>ID</td>
 				<td><form:input path="graphicsCardId" /></td>

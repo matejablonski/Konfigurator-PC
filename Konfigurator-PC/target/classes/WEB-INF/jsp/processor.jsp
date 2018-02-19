@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Lista kart graficznych</title>
+	<title>Procesory</title>
 	<link rel="stylesheet" type="text/css" href="/WEB-INF/style.css">
 	<style>
      	<%@ include file="style.css"%>
@@ -21,19 +21,19 @@
     	
 </div>
 <div id="content">
-<h2>Lista kart graficznych</h2>
+<h2>Lista procesorow</h2>
 <br/>
-	<form  action="<c:url value="/index" />" method="GET">
+	<form action="<c:url value="/index" />" method="GET">
     	<input type="submit" name="action" value="Strona glowna" />
 	</form>
 	<br/>
 	<br/>
 	<br/>
-	<form:form action="graphicsCard.do" method="POST" commandName="graphicsCard">
+	<form:form action="processor.do" method="POST" commandName="processor">
 		<table style="text-align: left;">
 			<tr>
 				<td>ID</td>
-				<td><form:input path="graphicsCardId" /></td>
+				<td><form:input path="processorId" /></td>
 			</tr>
 			<tr>
 				<td>Producent</td>
@@ -68,12 +68,12 @@
 		<th>Nazwa</th>
 		<th>Cena</th>
 	</tr>
-	<c:forEach items="${graphicsCardList}" var="graphicsCard">
+	<c:forEach items="${processorList}" var="processor">
 		<tr>
-			<td>${graphicsCard.graphicsCardId}</td>
-			<td>${graphicsCard.producer}</td>
-			<td>${graphicsCard.name}</td>
-			<td>${graphicsCard.price}</td>
+			<td>${processor.processorId}</td>
+			<td>${processor.producer}</td>
+			<td>${processor.name}</td>
+			<td>${processor.price}</td>
 		</tr>
 	</c:forEach>
 </table>

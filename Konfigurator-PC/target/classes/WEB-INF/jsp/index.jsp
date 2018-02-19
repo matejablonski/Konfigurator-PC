@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Lista kart graficznych</title>
+	<title>Konfigurator-PC</title>
 	<link rel="stylesheet" type="text/css" href="/WEB-INF/style.css">
 	<style>
      	<%@ include file="style.css"%>
@@ -21,13 +21,20 @@
     	
 </div>
 <div id="content">
-Witaj na stronie Konfigurator-PC, umozliwiajacej skonfigurowanie zestawu komputerowego.
+	<h2>Witaj na stronie Konfigurator-PC, umozliwiajacej skonfigurowanie zestawu komputerowego.</h2>
+	<form action="<c:url value="/listaKart" />" method="GET">
+    	<input type="submit" name="action" value="Karty graficzne" />
+	</form>
+	<form action="<c:url value="/listaProcesorow" />" method="GET">
+    	<input type="submit" name="action" value="Procesory" />
+	</form>
+	<form action="<c:url value="/listaPamieci" />" method="GET">
+    	<input type="submit" name="action" value="Uklady pamieci" />
+	</form>
+</div>
 <br/>
 <br/>
-<div>
-	
-</div>
-</div>
+
 <div id="footer">
 	(c) Konfigurator-PC - Mateusz Jablonski 2018.
 </div>

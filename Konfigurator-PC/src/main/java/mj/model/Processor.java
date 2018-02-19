@@ -1,7 +1,5 @@
 package mj.model;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,46 +11,56 @@ public class Processor {
 	@Id
 	@Column
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int Id;
+	private int processorId;
 	@Column
-	private String Producer;
+	private String producer;
 	@Column
-	private String Name;
+	private String name;
 	@Column
-	private BigDecimal Price;
+	private double price;
 	
 	public Processor(){}
-	public Processor(int id, String producer, String name, BigDecimal price) {
+
+	public Processor(int processorId, String producer, String name, double price) {
 		super();
-		Id = id;
-		Producer = producer;
-		Name = name;
-		Price = price;
+		this.processorId = processorId;
+		this.producer = producer;
+		this.name = name;
+		this.price = price;
 	}
-	public int getId() {
-		return Id;
+
+	public int getProcessorId() {
+		return processorId;
 	}
-	public void setId(int id) {
-		Id = id;
+
+	public void setProcessorId(int processorId) {
+		this.processorId = processorId;
 	}
+
 	public String getProducer() {
-		return Producer;
+		return producer;
 	}
+
 	public void setProducer(String producer) {
-		Producer = producer;
+		this.producer = producer;
 	}
+
 	public String getName() {
-		return Name;
+		return name;
 	}
+
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
-	public BigDecimal getPrice() {
-		return Price;
+
+	public double getPrice() {
+		return price;
 	}
-	public void setPrice(BigDecimal price) {
-		Price = price;
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
+	
 	
 	
 }

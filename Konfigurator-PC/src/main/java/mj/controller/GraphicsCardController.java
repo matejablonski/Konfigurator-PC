@@ -19,7 +19,7 @@ public class GraphicsCardController {
 	@Autowired
 	private GraphicsCardService graphicsCardService;
 	
-	@RequestMapping("/index")
+	@RequestMapping("/listaKart")
 	public String setupForm(Map<String, Object> map){
 		GraphicsCard graphicsCard = new GraphicsCard();
 		map.put("graphicsCard", graphicsCard);

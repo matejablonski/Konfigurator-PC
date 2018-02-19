@@ -1,6 +1,5 @@
 package mj.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,49 +10,78 @@ import javax.persistence.Id;
 public class Memory {
 	@Id
 	@Column
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int Id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int memoryId;
 	@Column
-	private String Producer;
+	private String producer;
 	@Column
-	private String Name;
+	private String name;
 	@Column
-	private double Price;
+	private String freq;
+	@Column
+	private String capacity;
+	@Column
+	private double price;
 	
 	public Memory(){}
-	public Memory(int id, String producer, String name, double price) {
+	public Memory(int memoryId, String producer, String name, String freq, String capacity, double price) {
 		super();
-		Id = id;
-		Producer = producer;
-		Name = name;
-		Price = price;
+		this.memoryId = memoryId;
+		this.producer = producer;
+		this.name = name;
+		this.freq = freq;
+		this.capacity = capacity;
+		this.price = price;
 	}
 
-	public int getId() {
-		return Id;
+	public int getMemoryId() {
+		return memoryId;
 	}
-	
-	public void setId(int id) {
-		Id = id;
+
+	public void setMemoryId(int memoryId) {
+		this.memoryId = memoryId;
 	}
+
 	public String getProducer() {
-		return Producer;
+		return producer;
 	}
-	public void setProducer(String producer) {
-		Producer = producer;
+
+	public void setProducer(String roducer) {
+		this.producer = roducer;
 	}
+
 	public String getName() {
-		return Name;
+		return name;
 	}
+
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
+
+	public String getFreq() {
+		return freq;
+	}
+
+	public void setFreq(String freq) {
+		this.freq = freq;
+	}
+
+	public String getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(String capacity) {
+		this.capacity = capacity;
+	}
+
 	public double getPrice() {
-		return Price;
+		return price;
 	}
+
 	public void setPrice(double price) {
-		Price = price;
+		this.price = price;
 	}
 	
 	
+		
 }
